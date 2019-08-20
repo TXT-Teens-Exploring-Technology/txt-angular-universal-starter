@@ -3,6 +3,7 @@
 .vscode
 
 package-lock.json
+.env
 
 # Built #
 /__build__/
