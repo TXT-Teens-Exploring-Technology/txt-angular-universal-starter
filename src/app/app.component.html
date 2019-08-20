@@ -1,0 +1,237 @@
+<nav class="navbar navbar-expand-lg custom-nav top">
+    <a class="navbar-brand custom-nav-brand" href="#">
+      <img src="assets/logo/logo-color.png" alt="TXT Logo" />
+    </a>
+    <div class="burger-container">
+      <div class="burger" id="burger1" (click)="toggleNavMenu()"
+        [ngClass]="{'burger1-open': activeNavMenu, 'burger1': !activeNavMenu}"></div>
+    </div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" [ngClass]="{'show': activeNavMenu }">
+      <ul class="navbar-nav ml-auto mr-auto">
+        <li class="nav-item" (click)="toggleNavMenu()">
+          <a class="nav-link black-text" routerLinkActive="activeLink" routerLink='/home'>Home</a>
+        </li>
+        <!-- about on desktop -->
+        <li class="nav-item desktop" (click)="toggleNavMenu()">
+          <span class="nav-link black-text">About</span>
+  
+          <div class="dropdown">
+            <ul>
+              <li>
+                <a class="nav-link black-text left-text" routerLinkActive="activeLink" routerLink='/about/team'>The
+                  Kickass Team</a>
+              </li>
+  
+              <!--[Changed] Commented out<li>
+                <a class="nav-link black-text left-text" routerLinkActive="activeLink" routerLink='/about/symposium'>UCLA
+                  Symposium</a>
+              </li>-->
+            </ul>
+          </div>
+        </li>
+        <!-- about on mobile -->
+        <li class="nav-item mobile">
+          <span class="nav-link black-text" (click)="toggleDropdown(0)">
+            About
+  
+            <i class="fas fa-chevron-down" *ngIf="!dropdownMenu[0]"></i>
+            <i class="fas fa-chevron-up" *ngIf="dropdownMenu[0]"></i>
+          </span>
+          <div class="dropdown mobile" *ngIf="dropdownMenu[0]">
+            <ul>
+              <li>
+                <a class="nav-link black-text left-text" (click)="toggleNavMenu()" routerLinkActive="activeLink"
+                  [routerLink]="['/about/team']">Kickass Team</a>
+              </li>
+              <li>
+                <a class="nav-link black-text left-text" (click)="toggleNavMenu()" routerLinkActive="activeLink"
+                  [routerLink]="['/about/symposium']">Symposium</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <!-- programs on desktop -->
+        <li class="nav-item desktop" (click)="toggleNavMenu()">
+          <span class="nav-link black-text">Programs</span>
+          <div class="dropdown">
+            <ul>
+              <li>
+                <a class="nav-link black-text left-text" routerLinkActive="activeLink" routerLink='/programs/scla'>Summer
+                  Coding Leadership Academy</a>
+              </li>
+              <!--
+              <li>
+                <a class="nav-link black-text left-text" routerLinkActive="activeLink" routerLink='/programs/jrscla'>Junior Summer
+                  Coding Leadership Academy</a>
+              </li>
+              -->
+              <li>
+                <a class="nav-link black-text left-text" routerLinkActive="activeLink"
+                  [routerLink]="['/programs/seals']">SEALS</a>
+              </li>
+              <li>
+                <a class="nav-link black-text left-text" routerLinkActive="activeLink"
+                  [routerLink]="['/programs/hackathon']">Hustle
+                  N Code</a>
+              </li>
+              <li>
+                <a class="nav-link black-text left-text" href="http://txtlabs.io">TXT Labs</a>
+              </li>
+              <li>
+                <a class="nav-link black-text left-text" routerLinkActive="activeLink" [routerLink]="['/TXT-culture']">TXT
+                  Culture</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <!-- programs on mobile -->
+        <li class="nav-item mobile">
+          <span class="nav-link black-text" (click)="toggleDropdown(1)">
+            Programs
+  
+            <i class="fas fa-chevron-down" *ngIf="!dropdownMenu[1]"></i>
+            <i class="fas fa-chevron-up" *ngIf="dropdownMenu[1]"></i>
+          </span>
+          <div class="dropdown mobile" *ngIf="dropdownMenu[1]">
+            <ul>
+              <li>
+                <a class="nav-link black-text left-text" (click)="toggleNavMenu()" routerLinkActive="activeLink"
+                  [routerLink]="['/programs/scla']">Summer Coding Leadership Academy</a>
+              </li>
+              <!--
+              <li>
+                <a class="nav-link black-text left-text" (click)="toggleNavMenu()" routerLinkActive="activeLink"
+                  [routerLink]="['/programs/jrscla']">Junior Summer Coding Leadership Academy</a>
+              </li>
+              -->
+              <li>
+                <a class="nav-link black-text left-text" (click)="toggleNavMenu()" routerLinkActive="activeLink"
+                  [routerLink]="['/programs/seals']">SEALS</a>
+              </li>
+              <li>
+                <a class="nav-link black-text left-text" (click)="toggleNavMenu()" routerLinkActive="activeLink"
+                  [routerLink]="['/programs/hackathon']">Hustle N' Code</a>
+              </li>
+              <li>
+                <a class="nav-link black-text left-text" (click)="toggleNavMenu()" href="http://txtlabs.io">TXT Labs</a>
+              </li>
+              <li>
+                <a class="nav-link black-text left-text" (click)="toggleNavMenu()" routerLinkActive="activeLink"
+                  [routerLink]="['/TXT-culture']">TXT Culture</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <!-- get invovled on desktop -->
+        <li class="nav-item desktop" (click)="toggleNavMenu()">
+          <span class="nav-link black-text">Get Involved</span>
+          <div class="dropdown">
+            <ul>
+              <li>
+                <a class="nav-link black-text left-text" routerLinkActive="activeLink"
+                  routerLink='/get-involved/jobs'>Jobs</a>
+              </li>
+              <li>
+                <a class="nav-link black-text left-text" routerLinkActive="activeLink"
+                  [routerLink]="['/get-involved/fellow']">Fellowship/Internship</a>
+              </li>
+              <li>
+                <a class="nav-link black-text left-text" routerLinkActive="activeLink"
+                  [routerLink]="['/get-involved/volunteer']">Volunteer</a>
+              </li>
+              <li>
+                <a class="nav-link black-text left-text" routerLinkActive="activeLink"
+                  [routerLink]="['/get-involved/mentor']">Mentor</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <!-- get invovled on mobile -->
+        <li class="nav-item mobile">
+          <span class="nav-link black-text" (click)="toggleDropdown(2)">
+            Get Involved
+  
+            <i class="fas fa-chevron-down" *ngIf="!dropdownMenu[2]"></i>
+            <i class="fas fa-chevron-up" *ngIf="dropdownMenu[2]"></i>
+          </span>
+          <div class="dropdown mobile" *ngIf="dropdownMenu[2]">
+            <ul>
+              <li>
+                <a class="nav-link black-text left-text" (click)="toggleNavMenu()" routerLinkActive="activeLink"
+                  [routerLink]="['/get-involved/jobs']">Jobs</a>
+              </li>
+              <li>
+                <a class="nav-link black-text left-text" (click)="toggleNavMenu()" routerLinkActive="activeLink"
+                  [routerLink]="['/get-involved/fellow']">Fellowship/Internship</a>
+              </li>
+              <li>
+                <a class="nav-link black-text left-text" (click)="toggleNavMenu()" routerLinkActive="activeLink"
+                  [routerLink]="['/get-involved/volunteer']">Volunteer</a>
+              </li>
+              <li>
+                <a class="nav-link black-text left-text" (click)="toggleNavMenu()" routerLinkActive="activeLink"
+                  [routerLink]="['/get-involved/mentor']">Mentor</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <!-- news and media on desktop -->
+        <li class="nav-item desktop" (click)="toggleNavMenu()">
+          <span class="nav-link black-text">News & Events</span>
+  
+          <div class="dropdown">
+            <ul>
+              <li>
+                <a class="nav-link black-text left-text" routerLinkActive="activeLink" routerLink='/news/articles'>
+                  Articles</a>
+              </li>
+              <li>
+                <a class="nav-link black-text left-text" routerLinkActive="activeLink" routerLink='/news/podcasts'>
+                  Podcast</a>
+              </li>
+              <li>
+                <a class="nav-link black-text left-text" routerLinkActive="activeLink" routerLink='/news/demo-day-2019'>
+                  Demo Day 2019</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <!-- news and media on mobile -->
+        <li class="nav-item mobile">
+          <span class="nav-link black-text" (click)="toggleDropdown(3)">
+            News & Events
+  
+            <i class="fas fa-chevron-down" *ngIf="!dropdownMenu[3]"></i>
+            <i class="fas fa-chevron-up" *ngIf="dropdownMenu[3]"></i>
+          </span>
+          <div class="dropdown mobile" *ngIf="dropdownMenu[3]">
+            <ul>
+              <li>
+                <a class="nav-link black-text left-text" (click)="toggleNavMenu()" routerLinkActive="activeLink"
+                  [routerLink]="['/news/articles']">Articles</a>
+              </li>
+              <li>
+                <a class="nav-link black-text left-text" (click)="toggleNavMenu()" routerLinkActive="activeLink"
+                  [routerLink]="['/news/podcasts']">Podcast</a>
+              </li>
+              <li>
+                <a class="nav-link black-text left-text" (click)="toggleNavMenu()" routerLinkActive="activeLink"
+                [routerLink]="['/news/demo-day-2019']">Demo Day 2019</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item" (click)="toggleNavMenu()">
+          <a class="nav-link black-text" routerLinkActive="activeLink" routerLink='/contact-us'>Contact Us</a>
+        </li>
+      </ul>
+      <span class="nav-item donate" (click)="toggleNavMenu()">
+        <a class="nav-link donate-link" href="https://txt.networkforgood.com">
+          <span>Donate</span>
+          <i class="fa fa-heart"></i>
+        </a>
+      </span>
+    </div>
+</nav>
+
+<router-outlet ></router-outlet>

@@ -1,0 +1,27 @@
+<div class="colors-blue-background spacing-inner-padding">
+  <h1 class="header-title header-is-centered colors-white-text">Join our mailing list!</h1>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <!-- email field -->
+    <div class="form-group">
+      <label class="label colors-white-text">Email <span class="colors-error">*</span></label>
+      <input type="email" class="form-control forms-input-field forms-input-field-line" id="inputEmail"
+        formControlName="email">
+      <app-form-field-error [displayError]="email.invalid && email.touched" errorMsg="Invalid email.">
+      </app-form-field-error>
+    </div>
+    <!-- submit button -->
+    <button type="submit" class="forms-btn forms-btn-inverted">
+      <span *ngIf="submitted">
+        <i class="fas fa-spin fa-spinner"></i>
+      </span>
+
+      <span *ngIf="!submitted">
+        Subscribe
+      </span>
+    </button>
+  </form>
+  <app-form-field-error [displayError]="serverErrorResponse.status" [errorMsg]="serverErrorResponse.message"
+    *ngIf="serverErrorResponse"></app-form-field-error>
+  <app-form-field-success [displaySuccess]="serverSuccessResponse.status" [successMsg]="serverSuccessResponse.message"
+    *ngIf="serverSuccessResponse"></app-form-field-success>
+</div>

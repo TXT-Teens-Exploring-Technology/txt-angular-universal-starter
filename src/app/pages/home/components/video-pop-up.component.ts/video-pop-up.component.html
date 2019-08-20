@@ -1,0 +1,32 @@
+<!-- <div id="video-overlay" preventParentScroll *ngIf="show">
+  <div id="overlay-content">
+    <div id="exit" (click)="exit()">
+      <i class="fas fa-times"></i>
+    </div>
+
+    <div id="video-container"> 
+      <div id="video-title">
+        <h1>Who We Are</h1>
+      </div>
+      <youtube-player
+      [height]="400"
+      [width]="650"
+      [videoId]="id"
+      (ready)="savePlayer($event)"
+      (change)="onStateChange($event)"
+    ></youtube-player>
+    </div>
+  </div>
+</div> -->
+
+<div id="video-overlay" preventParentScroll *ngIf="show">
+  <div id="overlay-content">
+    <div id="exit" (click)="exit()">
+      <i class="fas fa-times"></i>
+    </div>
+
+    <a id="video-container" href="https://hustlencode.xyz" target="_blank"> 
+      <img src="assets/pages/home/pop-up/hackathon.jpg" alt="">
+    </a>
+  </div>
+</div>

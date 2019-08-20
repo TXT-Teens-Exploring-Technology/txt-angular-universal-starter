@@ -1,0 +1,27 @@
+<div class="testimonial-padding">
+  <!--Carousel Wrapper-->
+<mdb-carousel [interval]="7500" [isControls]="true" [animation]="'slide'" class="carousel slide">
+  <mdb-slide *ngFor="let item of items">
+    <div class="testimonial-container">
+      <div class="testimonial-img">
+        <img [src]="item.src" [alt]="item.altText" />
+      </div>
+      <div class="testimonial-signature">
+        <h1>
+            {{item.name}}
+          <br />
+            {{item.desc}}
+        </h1>
+      </div>
+      <div class="testimonial-content">
+        <div class="testimonial-quote">
+          <p>
+              {{item.caption}}
+           </p>
+        </div>
+      </div>
+    </div>
+  </mdb-slide>
+</mdb-carousel>
+<!--/.Carousel Wrapper-->
+</div>

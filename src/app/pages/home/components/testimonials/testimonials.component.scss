@@ -1,0 +1,696 @@
+/* universal styles */
+
+#test {
+  height: 300vh;
+}
+
+.font {
+  font-family: 'Roboto', sans-serif;
+}
+
+.noselect {
+  -webkit-touch-callout: none !important;
+  /* iOS Safari */
+  -webkit-user-select: none !important;
+  /* Safari */
+  -khtml-user-select: none !important;
+  /* Konqueror HTML */
+  -moz-user-select: none !important;
+  /* Firefox */
+  -ms-user-select: none !important;
+  /* Internet Explorer/Edge */
+  user-select: none !important;
+  outline: none !important;
+  /* Non-prefixed version, currently
+                                    supported by Chrome and Opera */
+}
+
+.blue {
+  margin-left: 2px;
+  color: #2594A9;
+}
+
+.white {
+  color: white;
+}
+
+.container-margin {
+  margin-top: 75px;
+}
+
+.container-fluid {
+  padding: 0 25px;
+}
+
+/* banner styles */
+
+.banner {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.banner-content {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#img {
+  display: block;
+  margin-left: -100px;
+  margin-top: 50px;
+  height: 100%;
+}
+
+#vid {
+  display: none;
+  max-height: 100%;
+  min-height: 100%;
+  min-width: 100%;
+  background-color: black;
+}
+
+.header {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+}
+
+.banner-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0 25px;
+}
+
+.banner-title {
+  font-weight: 500;
+  margin: auto;
+  text-transform: none;
+  color: white;
+  max-width: 1150px;
+  opacity: 0.7;
+  font-size: 2.999em;
+}
+
+/* why it matters styles */
+
+.what-we-do {
+  justify-content: center;
+  text-align: justify;
+}
+
+.what-we-do h2 {
+  display: inline-block;
+  margin: auto;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 25px;
+}
+
+.what-we-do p {
+  font-weight: 300;
+  color: #7a7a7a;
+}
+
+.jail-stat-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 25px 0 35px 0;
+}
+
+.fa-male {
+  font-size: 120px;
+  margin: 0 5px;
+}
+
+.jail-num {
+  text-align: center;
+}
+
+/* testimonials */
+
+::ng-deep .testimonial-img {
+  width: 175px;
+  height: 175px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: auto;
+}
+
+::ng-deep .testimonial-img div {
+  height: 207px;
+  overflow: hidden;
+  text-align: center;
+}
+
+::ng-deep .testimonial-content {
+  display: inline-block;
+  width: 100%;
+  height: auto;
+}
+
+::ng-deep .testimonial-container {
+  width: 100%;
+}
+
+::ng-deep .testimonial-img img {
+  height: 100%;
+}
+
+::ng-deep .testimonial-quote {
+  color: white;
+  font-weight: 300;
+  text-align: justify;
+  margin: 25px 0 0 0;
+  padding: 0 0 25px 0;
+}
+
+::ng-deep .testimonial-signature {
+  text-align: center;
+  margin-top: 25px;
+}
+
+::ng-deep .testimonial-signature h1 {
+  color: white;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+::ng-deep .testimonial-signature h3 {
+  color: white;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+::ng-deep .carousel .carousel-control-prev-icon,
+::ng-deep .carousel .carousel-control-next-icon {
+  width: 55px;
+  height: 55px;
+}
+
+::ng-deep .carousel-control-prev {
+  left: -45px !important;
+}
+
+::ng-deep .carousel-control-next {
+  right: -45px !important;
+}
+
+.leftRs:focus,
+.rightRs:focus {
+  outline: none;
+}
+
+.leftRs {
+  display: block !important;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  background-color: transparent;
+  border: none;
+  font-size: 36px;
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+
+.rightRs {
+  display: block !important;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  background-color: transparent;
+  border: none;
+  font-size: 36px;
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+
+.testimonial-padding {
+  padding: 50px 40px;
+  padding-bottom: 15px;
+  background-color: #2594A9;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+}
+
+/* ::ng-deep .carousel-control-prev-icon {
+    background-image: url('assets/pages/home/carousel/left.png');
+}
+
+::ng-deep .carousel-control-next-icon {
+    background-image: url('assets/pages/home/carousel/right.png');
+}
+
+::ng-deep .carousel-indicators {
+    bottom: 0px;
+} */
+
+/* how we do it */
+
+.step-title {
+  font-weight: 300;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.step-desc {
+  color: #939393;
+  font-weight: 300;
+  text-align: justify;
+}
+
+.order-last {
+  order: 2;
+}
+
+.order-first {
+  order: 1;
+}
+
+.spacing {
+  margin-top: 25px;
+}
+
+/* stats */
+
+#stats-container {
+  height: 750px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.stats-img {
+  height: 100%;
+}
+
+.stats-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.countup {
+  margin-top: 50px;
+}
+
+.stats-overlay {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+.stats-num {
+  margin: auto;
+  position: absolute;
+  top: 35%;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+  width: 100%;
+}
+
+.stat {
+  font-size: 3em;
+  line-height: 1.25em;
+  font-weight: 800;
+}
+
+.stat-detail {
+  font-size: 21px;
+  line-height: 1.153em;
+}
+
+/* sponsor logos */
+
+.logo-padding {
+  padding: 0 75px;
+}
+
+.logo-container {
+  overflow: hidden;
+  margin-top: 30px;
+}
+
+.logo-container img {
+  display: block;
+  margin: auto;
+  width: 75%;
+  height: auto;
+}
+
+.row-logo-spacing {
+  margin-top: 0;
+}
+
+.center {
+  justify-content: center;
+}
+
+.carousel-control-next {
+  right: -10px;
+}
+
+.carousel-control-prev {
+  left: -10px;
+}
+
+.custom-arrow {
+  cursor: pointer;
+  position: absolute;
+  top: 45%;
+  font-size: 36px;
+  color: white;
+}
+
+.custom-right-arrow {
+  right: -50px;
+}
+
+.custom-left-arrow {
+  left: -50px;
+}
+
+.slick-dots li.slick-active button:before {
+  opacity: .75;
+  color: white;
+}
+
+@media (min-width: 576px) {
+  .banner-title {
+    font-size: 3.999em;
+  }
+  .order-last {
+    order: 2;
+  }
+  .order-first {
+    order: 1;
+  }
+  /* why it matters */
+  .what-we-do,
+  .what-we-do h2 {
+    justify-content: center;
+    text-align: center;
+  }
+  /* testimonial */
+  .testimonial-padding {
+    padding: 50px 65px;
+  }
+  ::ng-deep .carousel-control-prev {
+    left: -75px;
+  }
+  ::ng-deep .carousel-control-next {
+    right: -75px;
+  }
+  /* stats */
+  #stats-container {
+    height: 105vh;
+    overflow: hidden;
+  }
+  /* sponsor logos */
+  .logo-container img {
+    display: block;
+    margin: auto;
+    width: 65%;
+    height: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .container-fluid {
+    padding: 0 75px;
+  }
+  .banner-title {
+    width: 100%;
+    font-size: 4.999em;
+  }
+  #img {
+    display: none;
+  }
+  #vid {
+    display: block;
+  }
+  /* why it matters */
+  .fa-male {
+    font-size: 100px;
+  }
+  /* testimonial */
+  .testimonial-padding {
+    padding: 50px 75px;
+  }
+  ::ng-deep .carousel-control-prev {
+    left: -95px;
+  }
+  ::ng-deep .carousel-control-next {
+    right: -95px;
+  }
+  /* how we do it*/
+  .step-title {
+    text-align: left;
+  }
+  .step-margin {
+    margin-top: 75px;
+  }
+  .order-last {
+    order: 1;
+  }
+  .order-first {
+    order: 2;
+  }
+  /* stats */
+  #stats-container {
+    height: 450px;
+    overflow: hidden;
+  }
+  .countup {
+    display: inline-block;
+    margin-top: 50px;
+    width: 49%;
+  }
+  /* sponsor logos */
+  .logo-container img {
+    display: block;
+    margin: auto;
+    width: 65%;
+    height: auto;
+  }
+  ::ng-deep .carousel-indicators {
+    bottom: -35px !important;
+  }
+  ::ng-deep .testimonial-content {
+    display: inline-block;
+    width: 100%;
+    height: 550px;
+  }
+  ::ng-deep .carousel-control-prev {
+    left: -85px !important;
+  }
+  ::ng-deep .carousel-control-next {
+    right: -85px !important;
+  }
+  ::ng-deep .carousel .carousel-control-prev-icon,
+  ::ng-deep .carousel .carousel-control-next-icon {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+  }
+}
+
+::ng-deep *:focus {
+  outline: 0;
+  outline: none;
+  }
+@media (min-width: 992px) {
+  .container-fluid {
+    padding: 0 75px;
+  }
+  .banner-title {
+    width: 100%;
+    font-size: 4.999em;
+  }
+  #img {
+    display: none;
+  }
+  #vid {
+    display: block;
+  }
+  /* why it matters */
+  .fa-male {
+    font-size: 100px;
+  }
+  /* testimonial */
+  .testimonial-padding {
+    padding: 50px 75px;
+  }
+  ::ng-deep .carousel-control-prev {
+    left: -95px;
+  }
+  ::ng-deep .carousel-control-next {
+    right: -95px;
+  }
+  /* how we do it*/
+  .step-title {
+    text-align: left;
+  }
+  .step-margin {
+    margin-top: 75px;
+  }
+  .order-last {
+    order: 1;
+  }
+  .order-first {
+    order: 2;
+  }
+  /* stats */
+  #stats-container {
+    height: 450px;
+    overflow: hidden;
+  }
+  .countup {
+    display: inline-block;
+    margin-top: 50px;
+    width: 49%;
+  }
+  /* sponsor logos */
+  .logo-container img {
+    display: block;
+    margin: auto;
+    width: 65%;
+    height: auto;
+  }
+  .carousel-control-next {
+    right: -50px;
+  }
+  .carousel-control-prev {
+    left: -50px;
+  }
+  ::ng-deep .carousel-indicators {
+    bottom: -35px !important;
+  }
+  ::ng-deep .testimonial-content {
+    display: inline-block;
+    width: 100%;
+    height: 400px;
+  }
+  ::ng-deep .carousel-control-prev {
+    left: -100px !important;
+  }
+  ::ng-deep .carousel-control-next {
+    right: -100px !important;
+  }
+  ::ng-deep .carousel .carousel-control-prev-icon,
+  ::ng-deep .carousel .carousel-control-next-icon {
+    width: 65px;
+    height: 65px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container-fluid {
+    padding: 0 75px;
+  }
+  .banner-title {
+    font-weight: 500;
+    margin: auto;
+    text-transform: none;
+    color: white;
+    max-width: 100%;
+    opacity: 0.7;
+    font-size: 4.999em;
+  }
+  /* stats */
+  #stats-container {
+    height: 425px;
+    overflow: hidden;
+  }
+  .countup {
+    display: inline-block;
+    width: 24%;
+    margin-top: 0;
+  }
+  .stats-num {
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+    width: 100%;
+    padding: 50px 75px
+  }
+  .stat {
+    font-size: 64px;
+  }
+  .stat-detail {
+    font-size: 24px;
+  }
+  .carousel-control-next {
+    right: -75px;
+  }
+  .carousel-control-prev {
+    left: -75px;
+  }
+
+  ::ng-deep .carousel-indicators {
+    bottom: -35px !important;
+  }
+  ::ng-deep .testimonial-content {
+    display: inline-block;
+    width: 100%;
+    height: 400px;
+  }
+  ::ng-deep .carousel-control-prev {
+    left: -125px !important;
+  }
+  ::ng-deep .carousel-control-next {
+    right: -125px !important;
+  }
+  ::ng-deep .carousel .carousel-control-prev-icon,
+  ::ng-deep .carousel .carousel-control-next-icon {
+    width: 65px;
+    height: 65px;
+  }
+}
+
+
+@media (min-width: 1500px) {
+  ::ng-deep .carousel-control-prev {
+    left: -175px !important;
+  }
+  ::ng-deep .carousel-control-next {
+    right: -175px !important;
+  }
+}
